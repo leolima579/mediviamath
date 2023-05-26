@@ -170,7 +170,7 @@ def get_player_data():
             has_fdraft=has_fdraft
         )
     else:
-        return {'error': 'Erro ao acessar a API'}, response.status_code
+        return {'error': 'Wrong Character name or problem acessing API.'}, response.status_code
 
 
 if __name__ == "__main__":
