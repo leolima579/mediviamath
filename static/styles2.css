@@ -1,0 +1,18 @@
+.bdr{
+border: 1px solid red;
+min-width: 300px;
+}
+
+.nvbr {
+      justify-content: center;
+      background-color: white;
+    }
+
+.btnbg{
+    background-color:white;
+}
+
+.maindiv{
+min-width: 100%;
+}
+

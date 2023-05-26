@@ -1,0 +1,44 @@
+.round_img{
+    width:8rem;
+    height:8rem;
+    margin-top: 2rem;
+}
+
+
+.ajeita{
+    width:10rem;
+    height:1rem;
+}
+.progress-container {
+  position: relative;
+}
+
+.progress-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  text-align: center;
+}
+
+.bdr{
+width:10rem;
+color:Black;
+border:21px solid black
+}
+
+.custom-progress-bar {
+  color:red;
+}
+
+.progress-bar-text{
+font-family:Cursive;
+font-size: .90rem;
+}
+/*
+.cfg{
+border:1px solid black;
+width:-21px;
+}
+*/
