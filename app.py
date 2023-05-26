@@ -5,8 +5,8 @@ from datetime import datetime
 from requests.auth import HTTPBasicAuth
 from dotenv import dotenv_values
 temp = dotenv_values(".env")
-authone = temp["ASIjfmnuinsadffgiuASKDJe"]
-authtwo = temp["ASFjadkfojert"]
+authone = "12886028"
+authtwo = "thais1805"
 
 
 auth = HTTPBasicAuth(authone, authtwo)
