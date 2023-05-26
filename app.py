@@ -27,7 +27,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/search', methods=['GET', 'POST'])
 def get_player_data():
     nome = request.form['nome']
     url = f"https://medivia.online/api/public/player/{nome}"
