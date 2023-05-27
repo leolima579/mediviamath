@@ -4,6 +4,7 @@ import requests
 from datetime import datetime
 from requests.auth import HTTPBasicAuth
 from dotenv import dotenv_values
+
 temp = dotenv_values(".env")
 authone = "12886028"
 authtwo = "thais1805"
@@ -51,6 +52,17 @@ def get_player_data():
         porcentagem = ((currentexp - currentlevelexp) / (exp_next_level - currentlevelexp)) * 100
         porcentagem_rounded = round(porcentagem, 2)
         porcentagem_formatted = "{:.2f}%".format(porcentagem_rounded)
+        ######################sharedlvl#############################
+        sharedhigh = round(level / 0.667)
+        sharedlow = round(level * 0.667)
+
+        ######################task count#############################
+        tasks = charinfo['player']['tasks']
+        task_count = 0
+        for task in tasks:
+            if 'kills' in task:
+                task_count +=1
+
 
         ########MainFactions################
         imperial = "Lightbringer Heroes"
@@ -167,7 +179,10 @@ def get_player_data():
             has_abomahell=has_abomahell,
             has_bnwacess=has_bnwacess,
             has_awacess=has_awacess,
-            has_fdraft=has_fdraft
+            has_fdraft=has_fdraft,
+            sharedhigh=sharedhigh,
+            sharedlow=sharedlow,
+            task_count=task_count,
         )
     else:
         return {'error': 'Wrong Character name or problem acessing API.'}, response.status_code
