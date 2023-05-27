@@ -42,6 +42,7 @@ def get_player_data():
         playername = charinfo['player']['name']
         playervoc = charinfo['player']['vocation']
         currentexp = charinfo['player']['experience']
+        player_world = charinfo['player']['world']
         currentexp_formatted = "{:,}".format(currentexp)
         level = charinfo['player']['level']
         next_level = level + 1
@@ -183,6 +184,7 @@ def get_player_data():
             sharedhigh=sharedhigh,
             sharedlow=sharedlow,
             task_count=task_count,
+            player_world=player_world
         )
     else:
         return {'error': 'Wrong Character name or problem acessing API.'}, response.status_code
